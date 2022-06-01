@@ -8,7 +8,7 @@ buildscript {
     repositories {
 
         mavenCentral()
-        jcenter()
+
 
     }
 
@@ -29,15 +29,30 @@ apply plugin :  'io.spring.dependency-management'
 
 group 'org.example'
 version '1.0-SNAPSHOT'
+sourceCompatibility= '1.8'
 
 repositories {
     mavenCentral()
+
 }
 
 dependencies {
 
-    implementation('org.springframework.boot:spring-boot-starter-web')
-    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation ('org.springframework.boot:spring-boot-starter-web')
+    testImplementation ('org.springframework.boot:spring-boot-starter-test')
+
+
+    implementation('org.projectlombok:lombok:1.18.20')
+    testImplementation('org.projectlombok:lombok:1.18.20')
+    annotationProcessor('org.projectlombok:lombok:1.18.20')
+    testAnnotationProcessor('org.projectlombok:lombok:1.18.20')
+
+
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
+    testImplementation("org.junit.vintage:junit-vintage-engine") {
+        exclude group: "org.hamcrest", module: "hamcrest-core"
+    }
 }
 
 test {
