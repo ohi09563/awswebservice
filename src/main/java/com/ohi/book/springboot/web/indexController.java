@@ -3,7 +3,6 @@ package com.ohi.book.springboot.web;
 import com.ohi.book.springboot.service.posts.PostsService;
 import com.ohi.book.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
